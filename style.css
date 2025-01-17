@@ -1,32 +1,70 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(247, 243, 243);
 }
 
-h1 {
-    text-align: center;
+.container {
+    display: flex;
+    /*height: 100%;*/
+    flex:1;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #9dc99fad;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    height: 100%;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 10px 0;
+}
+
+.sidebar a {
+    text-decoration: none;
     color: #333;
 }
 
-#peraturan-list {
-    margin-top: 20px;
+.sidebar a:hover {
+    text-decoration: underline;
 }
 
-.regulation-item {
-    background-color: #fff;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+.content {
+    width: 80%;
+    padding: 20px;
+    overflow-y: auto;
 }
 
-.regulation-item a {
-    color: #0066cc;
+#regulation-list a {
+    display: block;
+    margin: 5px 0;
+    color: #007BFF;
     text-decoration: none;
 }
 
-.regulation-item a:hover {
+#regulation-list a:hover {
     text-decoration: underline;
+}
+ol {
+    padding-left: 20px; /* Sesuaikan padding jika perlu */
+}
+
+ol li {
+    margin: 5px 0; /* Sesuaikan margin antar item */
 }

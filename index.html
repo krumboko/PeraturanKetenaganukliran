@@ -3,13 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daftar Peraturan Perundang-undangan</title>
+    <title>Daftar Peraturan Ketenaganukliran</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Daftar Peraturan Perundang-undangan</h1>
-    <div id="peraturan-list">Memuat peraturan...sabar</div>
-
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Jenis Peraturan</h3>
+            <ul>
+                <li><a href="#" onclick="filterByType('UU')">UU</a></li>
+                <li><a href="#" onclick="filterByType('PP')">PP</a></li>
+                <li><a href="#" onclick="filterByType('Perpres')">Perpres</a></li>
+                <li><a href="#" onclick="filterByType('Perba')">Perba</a></li>
+            </ul>
+            <h3>Tematik</h3>
+            <ul>
+                <li><a href="#" onclick="filterByTheme('Medik')">Medik</a></li>
+                <li><a href="#" onclick="filterByTheme('Industri')">Industri</a></li>
+                <li><a href="#" onclick="filterByTheme('Instalasi Nuklir')">Instalasi Nuklir</a></li>
+            </ul>
+        </aside>
+        <main class="content">
+            <h1>Daftar Peraturan</h1>
+            <div id="regulation-list">
+                <!-- Daftar peraturan akan dimuat di sini -->
+                                                   
+            </div>
+        </main>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
