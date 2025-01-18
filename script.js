@@ -1,6 +1,6 @@
 // URL Google Sheets yang di-publikasikan sebagai CSV
-//const googleSheetURL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTDUwM2xouQloZl9eAALhKO5Wc14X9FuUKuwuQdFzCsotEE2FYOCTVcPngQRvoB6z830v025D5twlnS/pub?output=csv';
-const googleSheetURL = 'https://drive.google.com/file/d/1EU9xeogE6mjTkYFNhiOzECw3mTQ_-yfx/view?usp=sharing'
+const googleSheetURL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTDUwM2xouQloZl9eAALhKO5Wc14X9FuUKuwuQdFzCsotEE2FYOCTVcPngQRvoB6z830v025D5twlnS/pub?output=csv';
+//const googleSheetURL = 'https://drive.google.com/file/d/1EU9xeogE6mjTkYFNhiOzECw3mTQ_-yfx/view?usp=sharing'
 let allRegulations = [];
 
 // Fungsi untuk memuat peraturan dari Google Sheets
