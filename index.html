@@ -1,67 +1,36 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Daftar Peraturan Ketenaganukliran</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 2rem;
-      background: #f0f0f0;
-    }
-    h1 {
-      color: #2c3e50;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    li {
-      margin-bottom: 10px;
-      background: #fff;
-      padding: 10px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    a {
-      color: #2980b9;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Peraturan Ketenaganukliran</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>📄 Daftar Peraturan Ketenaganukliran</h1>
-  <ul id="fileList">Memuat daftar peraturan...</ul>
-
-  <script>
-    const repoOwner = "krumboko";
-    const repoName = "PeraturanKetenaganukliran";
-
-    fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/`)
-      .then(response => response.json())
-      .then(data => {
-        const list = document.getElementById("fileList");
-        list.innerHTML = "";
-
-        data.forEach(file => {
-          if (file.name.endsWith(".pdf")) {
-            const li = document.createElement("li");
-            const link = document.createElement("a");
-            link.href = file.download_url;
-            link.target = "_blank";
-            link.textContent = file.name.replace(/-/g, ' ');
-            li.appendChild(link);
-            list.appendChild(li);
-          }
-        });
-      })
-      .catch(error => {
-        document.getElementById("fileList").innerText = "Gagal memuat daftar.";
-        console.error("Error:", error);
-      });
-  </script>
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Jenis Peraturan</h3>
+            <ul>
+                <li><a href="#" onclick="filterByType('UU')">UU</a></li>
+                <li><a href="#" onclick="filterByType('PP')">PP</a></li>
+                <li><a href="#" onclick="filterByType('Perpres')">Perpres</a></li>
+                <li><a href="#" onclick="filterByType('Perba')">Perba</a></li>
+            </ul>
+            <h3>Tematik</h3>
+            <ul>
+                <li><a href="#" onclick="filterByTheme('Medik')">Medik</a></li>
+                <li><a href="#" onclick="filterByTheme('Industri')">Industri</a></li>
+                <li><a href="#" onclick="filterByTheme('Instalasi Nuklir')">Instalasi Nuklir</a></li>
+            </ul>
+        </aside>
+        <main class="content">
+            <h1>Daftar Peraturan</h1>
+            <div id="regulation-list">
+                <!-- Daftar peraturan akan dimuat di sini -->
+                                                   
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
